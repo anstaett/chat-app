@@ -1,24 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import { auth } from './firebase';
+import ChatRoom from './ChatRoom';
+import SignIn from './SignIn';
 import './App.css';
 
+
 function App() {
+  const [user] = useAuthState(auth);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1 className='title'>AnChat Secret Chat Room 🤫</h1>
+        <SignOut />
       </header>
+
+      <section>
+        {user ? <ChatRoom /> : <SignIn />}
+      </section>
     </div>
+  );
+}
+
+function SignOut() {
+  return auth.currentUser && (
+    <button className='signout' onClick={() => auth.signOut()}>Sign Out</button>
   );
 }
 

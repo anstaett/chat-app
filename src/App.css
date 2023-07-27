@@ -1,38 +1,70 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital@1&family=Caveat:wght@500&family=Rock+Salt&display=swap');
+
+body {
+  font-family: 'Arvo', serif;
+
+}
+
+
+.chat-message {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.chat-input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.send-button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.typehere{
+  width: 50vh;
+  height: 8vh;
+  font-size: 1.5em; /* font-size is the same as the parent's font-size */
+  font-family: 'Arvo', serif;
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sendbtn{
+  height: 8.5vh;
+  padding-bottom: 1.5vh;
+  padding-right: 2vh;
+  padding-left: 1.4vh;
+  font-size: 2em; /* font-size is the same as the parent's font-size */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.signout{
+  height: 6vh;
+  width: 20vh;
+  font-size: 1.5em; /* font-size is the same as the parent's font-size */
+  font-family: 'Arvo', serif;
+  margin-left: 2vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.signin{
+  height: 6vh;
+  width: 30vh;
+  font-size: 1.5em; /* font-size is the same as the parent's font-size */
+  font-family: 'Arvo', serif;
+  margin-left: 2vh;
 }
 
-.App-link {
-  color: #61dafb;
+.title{
+  margin-left: 2vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cr{
+  margin-left: 2vh;
 }
