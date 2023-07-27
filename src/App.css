@@ -68,3 +68,13 @@ body {
 .cr{
   margin-left: 2vh;
 }
+
+@media only screen and (max-width: 600px) {
+    .signin{
+      height: 20vh;
+    }
+    .typehere{
+      width: 40vh;
+      margin-bottom:2vh;
+    }
+}
