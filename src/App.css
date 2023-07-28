@@ -34,7 +34,10 @@ body {
   font-size: 1.5em; /* font-size is the same as the parent's font-size */
   font-family: 'Arvo', serif;
   text-align: center;
+}
 
+.typebox{
+  padding-top: 1vh;
 }
 
 .sendbtn{
@@ -43,6 +46,7 @@ body {
   padding-right: 2vh;
   padding-left: 1.4vh;
   font-size: 2em; /* font-size is the same as the parent's font-size */
+  margin-left: 1vh;
 }
 
 .signout{
@@ -51,6 +55,9 @@ body {
   font-size: 1.5em; /* font-size is the same as the parent's font-size */
   font-family: 'Arvo', serif;
   margin-left: 2vh;
+  margin-bottom: 1vh;
+  min-height: 30px;
+  min-width: 120px;
 }
 
 .signin{
@@ -63,6 +70,7 @@ body {
 
 .title{
   margin-left: 2vh;
+  font-size: xx-large;
 }
 
 .cr{
@@ -70,11 +78,45 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .signin{
-      height: 20vh;
-    }
+    
     .typehere{
-      width: 40vh;
+      width: 30vh;
       margin-bottom:2vh;
     }
+    .sendbtn{
+      padding-bottom: 1.27vh;
+      height: 8.75vh;
+    }
+    .msg{
+      font-size: large;
+    }
 }
+
+@media screen and (max-height: 900px) {
+  .signout{
+    font-size: large;
+    height: 4vh;
+    width: 1vw;
+    margin-bottom: 0;
+  }
+  .title{
+    font-size: x-large;
+  }
+  .typehere{
+    font-size: larger;
+    margin-top: 0;
+    height: 4vh;
+  }
+  .sendbtn{
+    font-size: larger;
+    margin-top: 0;
+    padding-bottom: .5vh;
+    height: 4.8vh;
+  }
+}
+
+
+.msg{
+  font-size: larger;
+}
+

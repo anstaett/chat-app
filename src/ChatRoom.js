@@ -11,7 +11,7 @@ function ChatRoom() {
 
   useEffect(() => {
     const messagesRef = collection(db, 'messages');
-    const q = query(messagesRef, orderBy('createdAt', 'desc'), limit(20));
+    const q = query(messagesRef, orderBy('createdAt', 'desc'), limit(15));
     const unsubscribe = onSnapshot(q, snapshot => {
       let messages = snapshot.docs.map(doc => doc.data());
       setMessages(messages.reverse()); // Reverse the array to display the newest messages at the bottom
@@ -42,11 +42,11 @@ function ChatRoom() {
 
   return (
     <div className='cr'>
-      <div>
+      <div className='msg'>
         {messages && messages.map((msg, i) => <ChatMessage key={i} message={msg} />)}
       </div>
 
-      <form onSubmit={sendMessage}>
+      <form className='typebox' onSubmit={sendMessage}>
         <input
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
@@ -56,6 +56,8 @@ function ChatRoom() {
 
         <button className='sendbtn' type="submit" disabled={!formValue}>📨</button>
       </form>
+      <br></br>
+
     </div>
   )
 }
@@ -67,3 +69,4 @@ function ChatMessage(props) {
 }
 
 export default ChatRoom;
+
