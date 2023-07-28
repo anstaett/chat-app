@@ -113,6 +113,9 @@ body {
     padding-bottom: .5vh;
     height: 4.8vh;
   }
+  .signin{
+    width: 40vh;
+  }
 }
 
 
